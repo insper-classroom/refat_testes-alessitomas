@@ -9,20 +9,29 @@ from classes.PessoaFisica import PessoaFisica
 from classes.Endereco import Endereco
 
 
-pessoa1 = PessoaFisica('Carlos', 'tiago@email.com', '524.222.452-6')
-print(pessoa1)
+# pessoa1 = PessoaFisica('Carlos', 'tiago@email.com', '524.222.452-6')
+# print(pessoa1)
 
 
-end1 = Endereco('08320330', 430)
-print(end1)
+# end1 = Endereco('08320330', 430)
+# print(end1)
 
-end2 = Endereco('04546042', 300)
-print(end2)
+# end2 = Endereco('04546042', 300)
+# print(end2)
 
-pessoa1.adicionar_endereco('casa', end1)
+# pessoa1.adicionar_endereco('casa', end1)
 
-print(pessoa1.listar_enderecos())
+# print(pessoa1.listar_enderecos())
 
-pessoa1.adicionar_endereco('trabalho', end2)
+# pessoa1.adicionar_endereco('trabalho', end2)
 
-print(pessoa1.listar_enderecos())
+# print(pessoa1.listar_enderecos())
+
+
+teste = Endereco.consultar_cep('82030590')
+print(teste)
+
+# teste consulta cep invalido 
+# def test_consulta_cep_invalido():
+#     end1 = Endereco('08320330', 430)
+#     assert end1.consultar_cep('08320330') == False
