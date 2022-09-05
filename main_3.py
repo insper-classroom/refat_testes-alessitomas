@@ -7,8 +7,14 @@
 # ---------------------------------------------------------------------------
 from classes.PessoaFisica import PessoaFisica
 from classes.Endereco import Endereco
+from classes.Produto import Produto
+from classes.Carrinho import Carrinho
+from classes.Pedido import Pedido
+from classes.Pagamentos import Pagamento
+
 
 import copy
+
 
 # Caso de uso em que se busca uma pessoa e um produto
 # Cria uma pessoa 
@@ -45,7 +51,7 @@ if len(pessoas) > 0:
     pessoa = pessoas[0]  #Pega a primeira pessoa
 
 
-produtos = Produto.busca_nome("sabon")
+produtos = Produto.busca_nome("sabonete")
 
 if len(produtos) > 0: 
     produto = produtos[0]
@@ -54,16 +60,16 @@ if len(produtos) > 0:
 carrinho = Carrinho()
 carrinho.adicionar_item(sabonete)
 
-pedido = Pedido()
+pedido = Pedido(pessoa1, end1,carrinho)
 
-ends = pessoa.listar_enderecos()
+ends = pessoa1.listar_enderecos()
 
-if len(ends > 0):
+if len(ends) > 0:
     endereco = ends[0]
 
 # Lembre-se de adicionar estes atributos ao endereço
 pedido.endereco_entrega = copy.deepcopy(endereco) 
-pedido.endereco_faturamento = copy.deepcopy(endreco)
+pedido.endereco_faturamento = copy.deepcopy(endereco)
 
 
 pag = Pagamento(pedido)

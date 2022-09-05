@@ -59,9 +59,6 @@ class Endereco:
         for digito in str(cep):
             if digito not in '0123456789':
                 return False
-         
-
-
         # continuam existindo variaveis locais, nem tudo é propriedade de objeto
 
         # end point da API de consulta ao cep

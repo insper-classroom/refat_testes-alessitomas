@@ -6,16 +6,23 @@
 # version ='1.0'
 # ---------------------------------------------------------------------------
 
+
 from classes.Endereco import Endereco
 from classes.PessoaFisica import PessoaFisica
 from classes.Carrinho import Carrinho
 import re
 
-
-
-
 class Pedido:
     EM_ABERTO = 1
     PAGO = 2
-    pass
+    def __init__(self,pessoa:PessoaFisica, end:Endereco,produto:Carrinho):
+        self.pessoa = pessoa
+        self.end = end
+        self.produto = produto
+        self.endereco_entrega  = end 
+        self.endereco_faturamento = end 
+        
+    
+    def __str__(self):
+        return f'{self.pessoa},{self.end},{self.produto}'
     

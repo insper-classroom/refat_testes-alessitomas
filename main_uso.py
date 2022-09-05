@@ -30,8 +30,3 @@ from classes.Endereco import Endereco
 
 teste = Endereco.consultar_cep('82030590')
 print(teste)
-
-# teste consulta cep invalido 
-# def test_consulta_cep_invalido():
-#     end1 = Endereco('08320330', 430)
-#     assert end1.consultar_cep('08320330') == False
